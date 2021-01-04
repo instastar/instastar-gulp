@@ -1,4 +1,4 @@
-const {src, dest, series, watch} = require('gulp')
+const { src, dest, series, watch } = require('gulp')
 const sass = require('gulp-sass')
 const csso = require('gulp-csso')
 const include = require('gulp-file-include')
@@ -31,8 +31,9 @@ function scss() {
 }
 
 function clear() {
-  return del('dist')
+  return del(['dist/*.html', 'dist/*.css', 'dist/*.js', '!dist/.git'])
 }
+
 
 function serve() {
   sync.init({
