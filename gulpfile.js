@@ -30,6 +30,12 @@ function scss() {
     .pipe(dest('dist'))
 }
 
+function js() {
+  return src('src/js/**.js')
+    .pipe(concat('app.js'))
+    .pipe(dest('dist'))
+}
+
 function clear() {
   return del(['dist/*.html', 'dist/*.css', 'dist/*.js', '!dist/.git'])
 }
@@ -44,6 +50,6 @@ function serve() {
   watch('src/scss/**.scss', series(scss)).on('change', sync.reload)
 }
 
-exports.build = series(clear, scss, html)
-exports.serve = series(clear, scss, html, serve)
+exports.build = series(clear, scss, js, html)
+exports.serve = series(clear, scss, js, html, serve)
 exports.clear = clear
