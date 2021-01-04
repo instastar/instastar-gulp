@@ -1,10 +1,86 @@
-$red: yellow;
-
-h1 {
-    color: $red;
+body{
+    background-color:#ffffe0;
 }
-
-
 main {
     min-height: 100vh;
+}
+.header{
+    margin-bottom: 100px;
+}
+.navbar {
+    width: 100%;
+}
+.logo{
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.main_title{
+    margin-bottom: 150px;
+    text-align: center;
+}
+
+.instagram_profile{
+    margin-bottom: 50px;
+}
+.instagram_gallery{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+#carouselExampleControls{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+
+.carousel-inner{
+    width: 500px;
+    height: auto;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon{
+    background-color: #3f3d3d;
+}
+
+@media screen and (max-device-width : 992px){
+    .header{
+        margin-bottom: 80px;
+    }
+    .instagram_gallery{
+        flex-direction: column;
+        margin-bottom: 100px;
+        align-items: center;
+    }
+    .instagram-video,
+    .instagram-sidecar,
+    .instagram-image{
+        width: 80%!important;
+        margin-bottom: 30px!important;
+    }
+    .instagram_profile_image{
+        width: 130px!important;
+    }
+}
+
+@media screen and (max-device-width : 768px){
+    .header{
+        margin-bottom: 70px;
+    }
+    .instagram_gallery{
+        flex-direction: column;
+        margin-bottom: 90px;
+    }
+    .instagram-video,
+    .instagram-sidecar,
+    .instagram-image{
+        width: 100%!important;
+        margin-bottom: 30px!important;
+    }
+    .instagram_profile_image{
+        width: 120px!important;
+    }
 }
