@@ -41,7 +41,7 @@ function js() {
 
 
 function clear() {
-  return del(['dist/*.html', 'dist/*.css', 'dist/*.js', '!dist/.git', '!dist/.png', '!dist/.ico'])
+  return del(['dist/*.html', 'dist/*.css', 'dist/*.js', '!dist/.git', '!dist/.png', '!dist/.ico', '!dist/.jpg'])
 }
 
 
